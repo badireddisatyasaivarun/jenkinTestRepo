@@ -26,7 +26,7 @@ public class BookingController {
 	@Autowired
 	private BookingService bookingService;
 	
-	@GetMapping("/test")
+	@GetMapping("/")
 	public String test() {
 		return "SUCCESS";
 	}
