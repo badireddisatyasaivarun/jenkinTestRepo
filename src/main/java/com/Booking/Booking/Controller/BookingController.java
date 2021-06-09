@@ -26,6 +26,11 @@ public class BookingController {
 	@Autowired
 	private BookingService bookingService;
 	
+	@GetMapping("/test")
+	public String test() {
+		return "SUCCESS";
+	}
+	
 	@PostMapping("/booking")
 	public BookingPostResponse addBooking(@RequestBody BookingPostRequest request) {
 		return bookingService.addBooking(request);
