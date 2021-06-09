@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+ booking-main:
+  build: ./
+  image: booking.jar
+  command: java -jar booking.jar
+  restart: always
+  links:
+   - docker-postgres
+  depends_on:
+   - docker-postgres
+  ports:
+   - "9090:9090"
+
+ docker-postgres:
+  image: postgres
+  restart: always
+  environment:
+   - POSTGRES_USER=postgres
+   - POSTGRES_PASSWORD=Varun09!
+   - POSTGRES_DATABASE=postgres
+   - POSTGRES_ROOT_PASSWORD=Varun09!
+  ports:
+   - "5432:5432"
+
+  
