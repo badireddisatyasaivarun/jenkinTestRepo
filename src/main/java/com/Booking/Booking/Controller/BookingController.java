@@ -28,7 +28,7 @@ public class BookingController {
 	
 	@GetMapping("/")
 	public String test() {
-		return "SUCCESS";
+		return "SUCCESS2";
 	}
 	
 	@PostMapping("/booking")
